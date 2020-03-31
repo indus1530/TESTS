@@ -20,9 +20,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+
     private SensorManager mSensorManager;
     private TextView mTextView;
     private List mList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
 
 
+        //SENSORS MANAGER
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         mTextView = findViewById(R.id.helloWorld);
         mList = mSensorManager.getSensorList(Sensor.TYPE_ALL);
@@ -39,6 +42,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         for (int i = 1; i < mList.size(); i++) {
             mTextView.append("\n" + mList.get(i));
         }
+        //SENSORS MANAGER
+
+
 
 
         FloatingActionButton fab = findViewById(R.id.fab);
