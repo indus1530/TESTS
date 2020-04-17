@@ -105,8 +105,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
-        if (id == R.id.nav_camera) {
+        switch (id) {
+            case R.id.nav_camera:
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            case R.id.nav_gallery:
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            case R.id.nav_slideshow:
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            case R.id.nav_manage:
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            case R.id.nav_share:
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            case R.id.nav_send:
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+        }
+
+        /*if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
@@ -121,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        drawer.closeDrawer(GravityCompat.START);*/
         return true;
     }
 }
